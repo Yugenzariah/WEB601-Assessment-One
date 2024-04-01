@@ -55,7 +55,8 @@ function getProductSchema() {
     const productId = document.getElementById('updateId').value;
     const formData = {
       name: document.getElementById('updateName').value,
-      price: parseFloat(document.getElementById('updatePrice').value)
+      price: parseFloat(document.getElementById('updatePrice').value),
+      image: document.getElementById('updateImage').value 
     };
     fetch(`/products/${productId}`, {
       method: 'PUT',

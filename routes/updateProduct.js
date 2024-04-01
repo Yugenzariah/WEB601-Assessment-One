@@ -6,8 +6,8 @@ const Product = require('../models/productModel.js');
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, price, image } = req.body;
-    const updatedFields = { name, price }; 
+    const { name, price, quantity, image } = req.body;
+    const updatedFields = { name, price, quantity }; 
     if (image) {
       updatedFields.image = image; // Update image if provided
     }

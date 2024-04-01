@@ -27,6 +27,7 @@ function getProductSchema() {
     const formData = {
       name: document.getElementById('name').value,
       price: parseFloat(document.getElementById('price').value),
+      quantity: parseInt(document.getElementById('quantity').value),
       image: document.getElementById('image').value
     };
     fetch('/products', {
@@ -56,6 +57,7 @@ function getProductSchema() {
     const formData = {
       name: document.getElementById('updateName').value,
       price: parseFloat(document.getElementById('updatePrice').value),
+      quantity: parseInt(document.getElementById('updateQuantity').value),
       image: document.getElementById('updateImage').value 
     };
     fetch(`/products/${productId}`, {

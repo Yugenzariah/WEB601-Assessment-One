@@ -26,7 +26,8 @@ function getProductSchema() {
     event.preventDefault();
     const formData = {
       name: document.getElementById('name').value,
-      price: parseFloat(document.getElementById('price').value)
+      price: parseFloat(document.getElementById('price').value),
+      image: document.getElementById('image').value
     };
     fetch('/products', {
       method: 'POST',

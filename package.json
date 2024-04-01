@@ -1,0 +1,17 @@
+{
+  "name": "web601-assessment-one",
+  "version": "1.0.0",
+  "description": "To design and implement a RESTful API using Node.js that performs CRUD operations on a product resource and to make the API handle different HTTP requests such as GET, POST, PUT, and DELETE that returns an appropriate response to the client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.4"
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WEB601 RESTful API</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <h1>Product REST API CRUD Operations</h1>
+
+  <!-- Button to retrieve all products -->
+  <button id="getAllProductsBtn" onclick="getAllProducts()">Get All Products</button>
+
+  <!-- Button to fetch product JSON schema -->
+  <button id="getProductSchemaBtn" onclick="getProductSchema()">Get Product JSON Schema</button>
+
+  <!-- Container to display the response of a request -->
+  <div id="response-container">
+    <div id="response"></div>
+  </div>
+
+  <!-- Form to create a new product -->
+  <h2>Create New Product</h2>
+  <form id="createProductForm" onsubmit="createProduct(event)">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" min="0" step="0.01" required><br>
+    <button type="submit">Create Product</button>
+  </form>
+
+  <!-- Form to update a product by ID -->
+  <h2>Update Product by ID</h2>
+  <form id="updateProductForm" onsubmit="updateProduct(event)">
+    <label for="updateId">Product ID:</label>
+    <input type="text" id="updateId" name="updateId" required><br>
+    <label for="updateName">New Name:</label>
+    <input type="text" id="updateName" name="updateName"><br>
+    <label for="updatePrice">New Price:</label>
+    <input type="number" id="updatePrice" name="updatePrice" min="0" step="0.01"><br>
+    <button type="submit">Update Product</button>
+  </form>
+
+  <!-- Form to delete a product by ID -->
+  <h2>Delete Product by ID</h2>
+  <form id="deleteProductForm" onsubmit="deleteProduct(event)">
+    <label for="deleteId">Product ID:</label>
+    <input type="text" id="deleteId" name="deleteId" required><br>
+    <button type="submit">Delete Product</button>
+  </form>
+
+  <script src="./products.js"></script>
+</body>
+</html>

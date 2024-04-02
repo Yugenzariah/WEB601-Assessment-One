@@ -13,7 +13,7 @@ function getProductSchema() {
   fetch('/products/schema')
       .then(response => response.json())
       .then(data => {
-          console.log('Product Schema:', data); // Log the schema data
+          console.log('Product Schema:', data); // Display the schema data in the console
           // Display the schema data in the response container
           document.getElementById('response').innerText = JSON.stringify(data, null, 2);
       })
@@ -21,7 +21,7 @@ function getProductSchema() {
 }
 
 
-  // Function to create a new product
+// Function to create a new product
   function createProduct(event) {
     event.preventDefault();
     const formData = {
@@ -50,7 +50,7 @@ function getProductSchema() {
     .catch(error => console.error('Error:', error));
   }
 
-  // Function to update a product by ID
+// Function to update a product by ID
   function updateProduct(event) {
     event.preventDefault();
     const productId = document.getElementById('updateId').value;
@@ -80,7 +80,7 @@ function getProductSchema() {
     .catch(error => console.error('Error:', error));
   }
 
-  // Function to delete a product by ID
+// Function to delete a product by ID
   function deleteProduct(event) {
     event.preventDefault();
     const productId = document.getElementById('deleteId').value;

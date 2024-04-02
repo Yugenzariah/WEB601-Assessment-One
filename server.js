@@ -8,7 +8,7 @@ app.use(express.json()); // To use http methods in JSON format
 // Middleware for parsing URL-encoded data
 app.use(express.urlencoded({ extended: false })) // To use http methods in forms format
 
-// Serve static files from the public directory
+// Middlware to Serve static files from the public directory
 app.use(express.static('public'));
 
 // Importing and using the product routes
